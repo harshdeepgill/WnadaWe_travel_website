@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WandaWe</title>
+    <script src="https://kit.fontawesome.com/98069f06b4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: roboto condensed;
+            /* color: white; */
+        }
+        #navbar{
+            padding: 10px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #778dd6;
+        }
+        #navbar>div{
+            display: flex;
+            align-items: center;
+        }
+        #navbar>.start{
+            width: 20%;
+            justify-content: start;
+            /* padding: 0 20%; */
+        }
+        .logo>img{
+            width: 20%;
+            /* border: 1px solid red; */
+        }
+        #navbar>.links{
+            width: 40%;
+            gap: 10%;
+            /* justify-content: space-between; */
+        }
+        #navbar>.start h2{
+            color: white;
+            /* font-family: roboto condensed 700; */
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 0;
+            /* margin-top: 10px; */
+        }
+        #navbar>.ends>button{
+            padding: 10px 20px;
+            font-family: inter 400;
+            font-size: 16px;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+        }
+        #navbar>.ends>button:nth-child(1){
+            background-color: #778dd6;
+            
+        }
+        #navbar>.ends>button:nth-child(2){
+            background-color: #1a1d2d;
+        }
+        #navbar>.ends>button:nth-child(2):hover{
+            background-color: #f69867;
+        }
+        #navbar>.links>a{
+            text-decoration: none;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+
+        }
+
+
+        /* Main */
+
+        #main{
+            background-color: #778dd6;
+            padding: 70px 27% 20px 27%;
+        }
+        #main>div{
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+        #main>div>h1{
+            font-size: 48px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 700;
+        }
+        #main>div>p{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            font-size: small;
+            padding: 0 10%;
+            margin-top: -5px;
+        }
+        #main>div>button{
+            margin-top: 20px;
+            padding: 10px 15px;
+            border: 0;
+            border-radius: 10px;
+            background-color: #f69867;
+            color: white;
+            font-family: roboto condensed;
+        }
+
+     /* image */
+     #image{
+        width: 100%;
+        margin-bottom: 0; 
+        /* position: absolute; */
+        display: flex;
+     }
+     #image>img{
+        /* position: relative; */
+        width: 100%;
+     }
+
+     /* main two */
+     #main-two{
+        margin-top: 0;
+        background-color: #1a1d2d;
+        color: white;
+        padding: 80px 27% 20px 27%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     }
+     #main-two>p{
+        font-weight: 400;
+        font-size: small;
+     }
+     #main-two>p:nth-child(1){
+        color: #778dd6;
+     }
+     #main-two>h1~p{
+        margin-top: -5px;
+        padding: 0 10%;
+     }
+     #main-two>h1{
+        font-size: 40px;
+        font-weight: 500;
+        margin-top: 0px;
+     }
+
+     /* services */
+     #services{
+        background-color: #1a1d2d;
+        color: white;
+        text-align: center;
+        padding: 10px 10% 30px 10%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     }
+     #services>div{
+        padding: 20px 10px;
+        background-color: #1b1e30;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+     }
+     #services>div>div{
+        background-color: #3d414f;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     #services>div>h4{
+
+     }
+     #services>div>p{
+        font-size: small;
+     }
+     #services>div>div>i{
+        color: #1a1d2d;
+        font-size: 32px;
+     }
+
+     /* Slideshow buttons */
+     #slideshow-buttons{
+        padding: 20px 10%;
+        display: flex;
+        justify-content: space-between;
+        background-color: #1a1d2d;
+
+     }
+     #slideshow-buttons>.buttons{
+        /* border: 1px solid red */
+        width: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+     }
+     #slideshow-buttons>.buttons>button{
+        color: white;
+        padding: 12px;
+        font-size: large;
+        border: 0;
+        border-radius: 50%;
+        background-color: #313442;
+
+     }
+     #slideshow-buttons>.buttons>button:hover{
+        background-color: #f69867;
+     }
+     #slideshow-buttons>.text{
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     }
+     #slideshow-buttons>.text>p{
+        margin-bottom: 0;
+        font-size: smaller;
+        color: #778dd6;
+     }
+     #slideshow-buttons>.text>h2{
+        margin-bottom: 0;
+        font-weight: 400;
+        font-size: xx-large;
+     }
+        
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="start logo"><img src="Project Files\Logo-removebg-preview.png" alt=""><div><h2>Wanda</h2><h2>We</h2></div></div>
+        <div class="links"><a href="">Home</a><a href="">Discover</a><a href="">Coustomise</a><a href="">About Us</a></div>
+        <div class="ends">
+            <button>Log in</button>
+            <button>Sign up</button>
+        </div>
+    </nav>
+
+    <!-- main -->
+    <div id="main">
+        <div><h1>Escape From Reality Let's Explore The World</h1><p>Get amazing experiance here no matter where in the world you want to go, we can help you go there anytime.</p><button>Book Now  <i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
+    </div>
+
+    <!-- image -->
+    <div id="image"><img src="Project Files\header_img.jpg" alt=""></div>
+
+    <!-- main two -->
+    <div id="main-two">
+        <p>Get Amazing Experiance</p>
+        <h1>Find Travel Prfection</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa incidunt ex quas eligendi. Dolores labore in natus commodi.</p>
+    </div>
+    
+    <!-- services -->
+    <div id="services">
+        <div><div><i class="fa-solid fa-clipboard-check"></i></div><h4>Scedule a Plan</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ullam modi atque quia quisquam hic, nisi eaque fuga?</p></div>
+        <div><div><i class="fa-solid fa-globe"></i></div><h4>Find a Destination</h4><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus porro repudiandae aliquam sequi vero recusandae obcaecati quam iste?</p></div>
+        <div><div><i class="fa-solid fa-heart"></i></div><h4>Enjoy Your Trip</h4><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae consectetur veniam exercitationem fugiat ullam, sint aut optio numquam?</p></div>
+    </div>
+
+    <!-- slideshow buttons -->
+    <div id="slideshow-buttons">
+        <div class="text"><p>Popular Destination</p><h2>Recommended Destination</h2></div>
+        <div class="buttons"><button><i class="fa-solid fa-arrow-left"></i></button><button><i class="fa-solid fa-arrow-right"></i></button></div>
+    </div>
+</body>
+</html>
