@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover</title>
+    <script src="https://kit.fontawesome.com/98069f06b4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: roboto;
+            background-color: #1a1d2d;
+            /* color: white; */
+        }
+        #navbar{
+            padding: 10px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #778dd6;
+        }
+        #navbar>div{
+            display: flex;
+            align-items: center;
+        }
+        #navbar>.start{
+            width: 20%;
+            justify-content: start;
+            /* padding: 0 20%; */
+        }
+        .logo>img{
+            width: 20%;
+            /* border: 1px solid red; */
+        }
+        #navbar>.links{
+            width: 40%;
+            gap: 10%;
+            /* justify-content: space-between; */
+        }
+        #navbar>.start h2{
+            color: white;
+            /* font-family: roboto condensed 700; */
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 0;
+            /* margin-top: 10px; */
+        }
+        #navbar>.ends>button{
+            padding: 10px 20px;
+            font-family: inter 400;
+            font-size: 16px;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+        }
+        #navbar>.ends>button:nth-child(1){
+            background-color: #778dd6;
+            
+        }
+        #navbar>.ends>button:nth-child(2){
+            background-color: #1a1d2d;
+        }
+        #navbar>.ends>button:nth-child(2):hover{
+            background-color: #f69867;
+        }
+        #navbar>.links>a{
+            text-decoration: none;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        /* container */
+
+        #container{
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3,1fr);
+        }
+        #container>div{
+          background-color: #1b1e30;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+          border-radius: 10px;
+        }
+        #container>div>div{
+          padding: 0 10px;
+          color: white;
+
+        }
+        #container img{
+            width: 100%;
+            max-height: 140px;
+            border-radius: 10px 10px 0 0 ;
+        }
+
+
+
+
+
+        #rule{
+      width: 80%;
+      margin: auto;
+      height: 2px;
+      background-color: #313442;
+      border: 0;
+     }
+
+     /* footer */
+
+     #footer{
+      width: 80%;
+      margin: 50px auto;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+     }
+     #footer .container{
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(3,1fr);
+      margin: 0 auto;
+     }
+     #footer .logo{
+      display: flex;
+      gap: 20px;
+     }
+     #footer .logo>i{
+      font-size: 40px;
+     }
+     #footer .cont{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     }
+
+     /* Sorting */
+     #sorting{
+      color: white;
+      width: 80%;
+      margin: auto;
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      justify-content: flex-start;
+     }
+     #sorting input{
+      width: 100px;
+      border: 0;
+      padding: 7px;
+      border-radius: 3px;
+     }
+     #sorting span{
+      margin: 0 5px;
+     }
+     #sorting select{
+      border: 0;
+      width: 150px;
+      padding: 7px;
+      border-radius: 3px;
+     }
+     #sorting button{
+      border: 0;
+      padding: 7px;
+      border-radius: 3px;
+      background-color: #f69867;
+      color: white;
+      margin-left: 10px;
+     }
+     #sorting>div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     }
+     #sorting>div>div>h3{
+      display: inline-block;
+     }
+
+
+     @media screen and (max-width: 800px){
+     #footer{
+      flex-direction: column;
+     }
+     #container{
+            grid-template-columns: repeat(2,1fr);
+        }
+     #sorting{
+      display: flex;
+      flex-direction: column;
+     }
+     }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="start logo"><img src="Project Files\Logo-removebg-preview.png" alt=""><div><h2>Wanda</h2><h2>WE</h2></div></div>
+        <div class="links"><a href="index.html">Home</a><a href="discover.html">Discover</a><a href="form.html">Coustomise</a><a href="">About Us</a></div>
+        <div class="ends">
+            <button>Log in</button>
+            <button>Sign up</button>
+        </div>
+    </nav>
+
+    <!-- Sorting -->
+
+    <div id="sorting">
+      <div>
+        <div>
+        <h3>Price Range</h3><button id="apply">Apply</button>
+      </div>
+        <div>
+        <input type="number" id="low"> <span>To </span> <input type="number" id="high">
+        </div>
+        
+      </div>
+      <div>
+        <h3>Sort by Price</h3>
+        <select name="" id="sort-price">
+          <option value="">Sort by Price</option>
+          <option value="ltoh">Low to High</option>
+          <option value="htol">High to Low</option>
+        </select>
+      </div>
+      <div>
+        <h3>Sort by Country</h3>
+        <select name="" id="sort-country">
+          <option value="">Sort by Country</option>
+          <option value="India">India</option>
+          <option value="China">China</option>
+          <option value="Spain">Spain</option>
+          <option value="England">England</option>
+          <option value="Singapore">Singapore</option>
+          <option value="USA">USA</option>
+          <option value="Peru">Peru</option>
+          <option value="Greece">Greece</option>
+          <option value="Zimbabwe">Zimbabwe</option>
+          <option value="French Polynesia">French Polynesia</option>
+          <option value="France">France</option>
+          <option value="Brazil">Brazil</option>
+          <option value="Tanzania">Tanzania</option>
+          <option value="Maxico">Maxico</option>
+          <option value="Jordan">Jordan</option>
+          <option value="Egypt">Egypt</option>
+          <option value="Maldives">Maldives</option>
+          <option value="Italy">Italy</option>
+          <option value="Australia">Australia</option>
+          <option value="Norway">Norway</option>
+          <option value="Japan">Japan</option>
+        </select>
+      </div>
+    </div>
+
+
+
+    <div id="container">
+
+    </div>
+
+
+    <hr id="rule">
+
+    <!-- footer -->
+    <div id="footer">
+      <div>
+        <h3>Address</h3>
+        <p>V.P.O. Ganeshpur, Distt: Ambala, Haryana, 134202</p>
+        <h3>Contact Details</h3>
+        <p>+917009025478</p>
+        <p>er.harshdeepgill@gmail.com</p>
+        <p>Contact me for Site like this.</p>
+      </div>
+      <div class="cont">
+      <div class="container">
+        <div>
+          <h3>Contact Us</h3>
+          <h5>Location</h5>
+          <h5>Email</h5>
+          <h5>Telephone</h5>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <h5>Why WandaWE</h5>
+          <h5>Partner with us</h5>
+          <h5>Blog</h5>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <h5>Why WandaWE</h5>
+          <h5>Partner with us</h5>
+          <h5>Blog</h5>
+        </div>
+      </div>
+      <div class="logo">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      </div>
+    </div>
+</body>
+</html>
+<script>
+ let project_data = [
+
+{
+  name: "La Sagrada Família",
+  country: "Spain",
+  image: "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRBqqKqr21onAVq6raUtov7uxgcDeAth1j_qZL7IgfIGhFAzpo7A8MpZp-ESYU5wew2",
+  rating: 4.7,
+  price: 799,
+  days: 5,
+  description: "The Basílica i Temple Expiatori de la Sagrada Família, shortened as the Sagrada Família, is an unfinished church in the Eixample district of Barcelona, Catalonia, Spain."
+},
+{
+  name: "Stonehenge",
+  country: "England",
+  image: "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSr4Xg76c4hbwDTMcT-jSwgTYSHZaKWKUNotYgg1eBXsHUvPLOICuhbWDtxs15TPAMV",
+  rating: 4.9,
+  price: 899,
+  days: 3,
+  description: "Stonehenge is a prehistoric monument on Salisbury Plain in Wiltshire, England, two miles west of Amesbury. It consists of an outer ring of vertical sarsen standing stones, each around 13 feet high, seven feet wide, and weighing around 25 tons,"
+},
+{
+  name: "Zhangye National Geopark",
+  country: "China",
+  image: "https://image.cnbcfm.com/api/v1/image/106203303-1571991544516gettyimages-909324946.jpeg?v=1572260186&w=740&h=416&ffmt=webp&vtcrop=y",
+  rating: 4.3,
+  price: 499,
+  days: 2,
+  description: "The Zhangye National Geopark is located in Sunan and Linze counties within the prefecture-level city of Zhangye, in Gansu, China"
+},
+{
+  name: "Marina Bay Sands",
+  country: "Singapore",
+  image: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Marina_Bay_Sands_in_the_evening_-_20101120.jpg",
+  rating: 4.4,
+  price: 999,
+  days: 2,
+  description: "Marina Bay Sands is an integrated resort fronting Marina Bay in Singapore and a landmark of the city. At its opening in 2010, it was deemed the world's most expensive standalone casino property at S$8 billion."
+},
+{
+  name: "Hong Kong Disneyland",
+  country: "China",
+  image: "https://media.cntraveler.com/photos/5fdbcd5d770915229e50406a/1:1/w_1600,h_1600,c_limit/_DSC0557_a.jpg",
+  rating: 4.7,
+  price: 1299,
+  days: 5,
+  description: "Hong Kong Disneyland is a theme park located on reclaimed land in Penny's Bay, Lantau Island. It is located inside the Hong Kong Disneyland Resort and it is owned and managed by Hong Kong International Theme Parks."
+},
+{
+  name: "The Hawa Mahal",
+  country: "India",
+  image: "https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSr2RtTkQLZjhPYcZlR9ywcViaoTJKxJc7rx0WdafGC4lLunb0vNEDsmGE9-3G5ipI_",
+  rating: 4,
+  price: 345,
+  days: 7,
+  description: "The Hawa Mahal is a palace in the city of Jaipur, India. Built from red and pink sandstone, it is on the edge of the City Palace, Jaipur, and extends to the Zenana, or women's chambers"
+},
+{
+  name: "Yellowstone National Park",
+  country: "USA",
+  image: "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTmqMNltK383-sqsF17P_lpJ7RHzTKqAmUrcKRIXoovTGv7hjzMVeM76hg9qi4Kiyok",
+  rating: 4.1,
+  price: 299,
+  days: 2,
+  description: "Yellowstone National Park is a nearly 3,500-sq.-mile wilderness recreation area atop a volcanic hot spot. Mostly in Wyoming, the park spreads into parts of Montana and Idaho too."
+},
+{
+  name: "The Great Barrier Reef",
+  country: "USA",
+  image: "https://cdn.britannica.com/64/155864-050-34FBD7A2/view-Great-Barrier-Reef-Australia-coast.jpg",
+  rating: 3.7,
+  price: 899,
+  days: 5,
+  description: "The Great Barrier Reef is the world's largest coral reef system, composed of over 2,900 individual reefs and 900 islands stretching for over 2,300 kilometres over an area of approximately 344,400 square kilometres"
+},
+{
+  name: 'Machu Picchu',
+  country: 'Peru',
+  image: 'https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFjaHUlMjBwaWNjaHV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60',
+  rating: 4.9,
+  price: 120,
+  days: 3,
+  description: 'Ancient Incan citadel nestled high in the Andes mountains, offering breathtaking views and rich historical significance.'
+},
+{
+  name: 'Santorini',
+  country: 'Greece',
+  image: 'https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQBophontqMiGlMsOLdtPmI-Tb8QjX6XsY7fVoyep5c4NceRiJiKm5jzlMUICdIoRXl',
+  rating: 4.8,
+  price: 80,
+  days: 2,
+  description: 'A stunning Greek island known for its whitewashed buildings, blue-domed churches, and mesmerizing sunsets over the Aegean Sea.'
+},
+{
+  name: 'Victoria Falls',
+  country: 'Zimbabwe',
+  image: 'https://smartwatermagazine.com/sites/default/files/styles/thumbnail-1180x647/public/victoria_falls_1.jpg?itok=EgKN1vl3',
+  rating: 4.7,
+  price: 90,
+  days: 2,
+  description: 'One of the world\'s largest waterfalls, located on the Zambezi River, offering awe-inspiring beauty and thrilling adventures.'
+},
+{
+  name: 'Bora Bora',
+  country: 'French Polynesia',
+  image: 'https://www.tahiti.com/images1/banners/island_bora_bora_masthead2.jpg',
+  rating: 4.9,
+  price: 200,
+  days: 5,
+  description: 'A tropical paradise renowned for its crystal-clear turquoise waters, vibrant coral reefs, and luxurious overwater bungalows.'
+},
+{
+  name: 'The Louvre',
+  country: 'France',
+  image: 'https://media.architecturaldigest.com/photos/5900cc370638dd3b70018b33/1:1/w_2066,h_2066,c_limit/Secrets%20of%20Louvre%201.jpg',
+  rating: 4.8,
+  price: 60,
+  days: 1,
+  description: 'A world-renowned art museum located in Paris, home to iconic masterpieces like the Mona Lisa and Venus de Milo.'
+},
+{
+  name: 'The Amazon Rainforest',
+  country: 'Brazil',
+  image: 'https://hips.hearstapps.com/hmg-prod/images/mata-atlantica-atlantic-forest-in-brazil-royalty-free-image-1668724621.jpg?resize=1200:*',
+  rating: 4.7,
+  price: 150,
+  days: 4,
+  description: 'The world\'s largest tropical rainforest, teeming with diverse wildlife, vibrant ecosystems, and indigenous cultures.'
+},
+{
+  name: 'The Serengeti',
+  country: 'Tanzania',
+  image: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Serengeti-Landscape-2012.JPG',
+  rating: 4.9,
+  price: 100,
+  days: 3,
+  description: 'A renowned African safari destination known for its vast grasslands, abundant wildlife, and the annual Great Migration.'
+},
+{
+  name: 'The Pyramids of Chichen Itza',
+  country: 'Mexico',
+  image: 'https://cdn.britannica.com/49/61349-050-9FFBEB28/El-Castillo-pyramid-plaza-Toltec-state-Yucatan.jpg?w=600&q=60',
+  rating: 4.6,
+  price: 70,
+  days: 1,
+  description: 'An ancient Mayan city with impressive pyramids, such as El Castillo, showcasing the architectural marvels of a bygone era.'
+},
+{
+  name: 'The Grand Canyon',
+  country: 'USA',
+  image: 'https://cdn.britannica.com/65/80465-050-053C02DC/Colorado-River-Grand-Canyon-Arizona-National-Park.jpg',
+  rating: 4.9,
+  price: 100,
+  days: 2,
+  description: 'A breathtaking natural wonder carved by the Colorado River, showcasing towering cliffs and vibrant geological formations.'
+},
+{
+  name: 'Petra',
+  country: 'Jordan',
+  image: 'https://cdn.britannica.com/88/189788-050-9B5DB3A4/Al-Dayr-Petra-Jordan.jpg',
+  rating: 4.9,
+  price: 90,
+  days: 2,
+  description: 'An ancient city carved into rose-colored sandstone cliffs, revealing remarkable architectural achievements of the Nabateans.'
+},
+{
+  name: 'The Taj Mahal',
+  country: 'India',
+  image: 'https://cdn.britannica.com/86/170586-050-AB7FEFAE/Taj-Mahal-Agra-India.jpg?w=300',
+  rating: 4.9,
+  price: 80,
+  days: 1,
+  description: 'A UNESCO World Heritage site, this magnificent mausoleum is a testament to love, featuring intricate marble craftsmanship.'
+},
+{
+  name: 'The Great Sphinx',
+  country: 'Egypt',
+  image: 'https://cdn.britannica.com/06/9306-050-1816909E/Great-Sphinx-dynasty-Giza.jpg?w=400&h=300&c=crop',
+  rating: 4.7,
+  price: 60,
+  days: 1,
+  description: 'An iconic ancient monument with the body of a lion and the head of a human, shrouded in mystery and mythology.'
+},
+{
+  name: 'The Maldives',
+  country: 'Maldives',
+  image: 'https://media.architecturaldigest.com/photos/6032b3c9a0b9bd2edd5510d1/1:1/w_2880,h_2880,c_limit/Hero_Soneva%20Jani%20Chapter%20Two%20by%20Aksham%20Abdul%20Ghadir.jpg',
+  rating: 4.8,
+  price: 200,
+  days: 5,
+  description: 'A tropical paradise consisting of coral islands, pristine beaches, and crystal-clear waters, perfect for relaxation and luxury escapes.'
+},
+{
+  name: 'The Eiffel Tower',
+  country: 'France',
+  image: 'https://cdn.britannica.com/83/99583-050-792F1327/Eiffel-Tower-Paris.jpg?w=300',
+  rating: 4.9,
+  price: 70,
+  days: 1,
+  description: 'A world-famous symbol of Paris, offering panoramic views of the city and a remarkable feat of iron architecture.'
+},
+{
+  name: 'The Forbidden City',
+  country: 'China',
+  image: 'https://cdn.britannica.com/03/198203-050-138BB1C3/entrance-Gate-of-Divine-Might-Beijing-Forbidden.jpg',
+  rating: 4.8,
+  price: 90,
+  days: 2,
+  description: 'A UNESCO World Heritage site, this sprawling palace complex was once the imperial residence of Chinese emperors.'
+},
+{
+  name: 'The Great Wall of China',
+  country: 'China',
+  image: 'https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2023/02/02192048/great-wall-of-china-1600x900.jpeg',
+  rating: 4.8,
+  price: 80,
+  days: 2,
+  description: 'An iconic man-made marvel stretching over 13,000 miles, offering breathtaking views and rich historical significance.'
+},
+{
+  name: 'The Grand Canal',
+  country: 'Italy',
+  image: 'https://cdn.britannica.com/63/153463-050-06B6270D/Grand-Canal-Venice.jpg',
+  rating: 4.7,
+  price: 70,
+  days: 1,
+  description: 'Venice\'s main waterway, winding through the historic city, lined with elegant buildings and traversed by gondolas.'
+},
+{
+  name: 'The Sydney Opera House',
+  country: 'Australia',
+  image: 'https://www.tripsavvy.com/thmb/k39AA6dtCIbao7bsVyy5HDz7AJo=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/OperaHouse-755d893182dc4811b608eb1a99792fd7.jpg',
+  rating: 4.9,
+  price: 90,
+  days: 1,
+  description: 'An architectural masterpiece and iconic performing arts center situated on Sydney Harbour.'
+},
+{
+  name: 'The Acropolis',
+  country: 'Greece',
+  image: 'https://cdn-imgix.headout.com/microbrands-banner-image/image/b698f96a3bf7e35418940973f33c4708-The%20Acropolis%20of%20Athens.jpeg',
+  rating: 4.8,
+  price: 60,
+  days: 1,
+  description: 'A UNESCO World Heritage site featuring ancient ruins, including the Parthenon, overlooking Athens.'
+},
+{
+  name: 'The Pyramids of Giza',
+  country: 'Egypt',
+  image: 'https://i.natgeofe.com/n/535f3cba-f8bb-4df2-b0c5-aaca16e9ff31/giza-plateau-pyramids.jpg',
+  rating: 4.9,
+  price: 100,
+  days: 2,
+  description: 'The last remaining wonder of the ancient world, showcasing the iconic pyramids and the enigmatic Sphinx.'
+},
+{
+  name: 'The Colosseum',
+  country: 'Italy',
+  image: 'https://cdn.britannica.com/36/162636-050-932C5D49/Colosseum-Rome-Italy.jpg',
+  rating: 4.8,
+  price: 70,
+  days: 1,
+  description: 'An ancient amphitheater in Rome, known for its gladiatorial contests and architectural grandeur.'
+},
+{
+  name: 'The Northern Lights',
+  country: 'Norway',
+  image: 'https://images.theconversation.com/files/440264/original/file-20220111-23-19p1ssc.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
+  rating: 4.9,
+  price: 120,
+  days: 3,
+  description: 'A natural phenomenon of colorful lights dancing across the Arctic sky, creating a mesmerizing spectacle.'
+},
+{
+  name: 'The Great Buddha of Kamakura',
+  country: 'Japan',
+  image: 'https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2016/02/Great-Buddah-of-Kamakura.jpg',
+  rating: 4.7,
+  price: 60,
+  days: 1,
+  description: 'A massive bronze statue of Buddha located in Kamakura, symbolizing peace and serenity.'
+},
+{
+  name: 'The Alhambra',
+  country: 'Spain',
+  image: 'https://images.unsplash.com/photo-1564740603199-5f56138c6679?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWxoYW1icmElMkMlMjBncmFuYWRhJTJDJTIwc3BhaW58ZW58MHx8MHx8fDA%3D&w=1000&q=80',
+  rating: 4.8,
+  price: 80,
+  days: 2,
+  description: 'A stunning Moorish palace and fortress complex in Granada, known for its intricate Islamic architecture.'
+},
+];
+    
+let temp_data = project_data.filter((e) =>{
+  return e;
+})
+let cont = document.getElementById("container");
+display(project_data);
+
+// Price range
+let apl = document.getElementById("apply");
+let lowP = document.getElementById("low");
+let hiP = document.getElementById("high");
+apl.addEventListener("click", function(){
+  let new_data = project_data.filter((a) =>{
+    if(a.price <= hiP.value && a.price>= lowP.value){
+      return a;
+    }
+  })
+
+  display(new_data);
+})
+
+// Sorting by Price
+let pchange = document.getElementById("sort-price");
+
+pchange.addEventListener("change", function (){
+  if(pchange.value === ""){
+    display(project_data);
+  }
+  else if(pchange.value == "ltoh"){
+    temp_data.sort((a,b) =>{
+      return a.price - b.price;
+    })
+    display(temp_data);
+  }
+  else{
+    temp_data.sort((a,b) =>{
+      return b.price - a.price;
+    })
+    display(temp_data);
+  }
+})
+
+// Sorting by country
+
+let cchange = document.getElementById("sort-country");
+
+cchange.addEventListener("change", function(){
+  if(cchange.value === ""){
+    display(project_data);
+  }
+  else{
+    let new_data = project_data.filter((a) =>{
+      if(a.country === cchange.value){
+        return a;
+      }
+    })
+    display(new_data);
+  }
+})
+
+
+function display(project_data){
+  cont.innerHTML = "";
+  project_data.forEach((e) =>{
+      let divi = document.createElement("div");
+  
+      let im = document.createElement("img");
+      let head1 = document.createElement("h3");
+      let spn1 = document.createElement("span");
+      let head2 = document.createElement("h4");
+      let spn2 = document.createElement("span");
+      let para = document.createElement("p");
+  
+      let mdivi = document.createElement("div");
+  
+      im.src = e.image;
+      head1.innerText = e.name;
+      spn1.innerText = e.country;
+      head2.innerText = "Price: $"+ e.price;
+      spn2.innerText = "Rating: "+e.rating;
+      para.innerText = e.description;
+  
+      mdivi.append( head1, spn1, head2, spn2, para);
+      divi.append(im,mdivi);
+      cont.append(divi);
+  })
+}
+
+</script>

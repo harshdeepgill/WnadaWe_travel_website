@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WandaWe</title>
+    <script src="https://kit.fontawesome.com/98069f06b4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: roboto;
+            background-color: #1a1d2d;
+            /* color: white; */
+        }
+        #navbar{
+            padding: 10px 10%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #778dd6;
+        }
+        #navbar .ends{
+          margin-left: auto;
+        }
+        #navbar>div{
+            display: flex;
+            align-items: center;
+        }
+        #navbar>.start{
+            width: 20%;
+            justify-content: start;
+            /* padding: 0 20%; */
+        }
+        .logo>img{
+            width: 20%;
+            /* border: 1px solid red; */
+        }
+        #navbar>.links{
+            width: 40%;
+            gap: 10%;
+            /* justify-content: space-between; */
+        }
+        #navbar>.start h2{
+            color: white;
+            /* font-family: roboto condensed 700; */
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 0;
+            /* margin-top: 10px; */
+        }
+        #navbar>.ends>button{
+            padding: 10px 20px;
+            font-family: inter 400;
+            font-size: 16px;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+        }
+        #navbar>.ends>button>a{
+          text-decoration: none;
+          color: white;
+        }
+        #navbar>.ends>button:nth-child(1){
+            background-color: #778dd6;
+            
+        }
+        #navbar>.ends>button:nth-child(2){
+            background-color: #1a1d2d;
+        }
+        #navbar>.ends>button:nth-child(2):hover{
+            background-color: #f69867;
+        }
+        #navbar>.links>a{
+            text-decoration: none;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+
+        }
+
+
+        /* Main */
+
+        #main{
+            background-color: #778dd6;
+            padding: 70px 27% 20px 27%;
+        }
+        #main>div{
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+        #main>div>h1{
+            font-size: 48px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 700;
+        }
+        #main>div>p{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            font-size: small;
+            padding: 0 10%;
+            margin-top: -5px;
+        }
+        #main>div button{
+            margin-top: 20px;
+            padding: 10px 15px;
+            border: 0;
+            border-radius: 10px;
+            background-color: #f69867;
+            color: white;
+            font-family: roboto condensed;
+        }
+
+     /* image */
+     #image{
+        width: 100%;
+        margin-bottom: 0; 
+        /* position: absolute; */
+        display: flex;
+     }
+     #image>img{
+        /* position: relative; */
+        width: 100%;
+     }
+
+     /* main two */
+     #main-two{
+        margin-top: 0;
+        background-color: #1a1d2d;
+        color: white;
+        padding: 80px 27% 20px 27%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     }
+     #main-two>p{
+        font-weight: 400;
+        font-size: small;
+     }
+     #main-two>p:nth-child(1){
+        color: #778dd6;
+     }
+     #main-two>h1~p{
+        margin-top: -5px;
+        padding: 0 10%;
+     }
+     #main-two>h1{
+        font-size: 40px;
+        font-weight: 500;
+        margin-top: 0px;
+     }
+
+     /* services */
+     #services{
+        background-color: #1a1d2d;
+        color: white;
+        text-align: center;
+        padding: 10px 10% 30px 10%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     }
+     #services>div{
+        padding: 20px 10px;
+        background-color: #1b1e30;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+     }
+     #services>div>div{
+        background-color: #3d414f;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     /* #services>div>h4{
+
+     } */
+     #services>div>p{
+        font-size: small;
+     }
+     #services>div>div>i{
+        color: #1a1d2d;
+        font-size: 32px;
+     }
+
+     /* Slideshow buttons */
+     #slideshow-buttons{
+        padding: 20px 10%;
+        display: flex;
+        justify-content: space-between;
+        background-color: #1a1d2d;
+
+     }
+     #slideshow-buttons>.buttons{
+        /* border: 1px solid red */
+        width: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+     }
+     #slideshow-buttons>.buttons>button{
+        color: white;
+        padding: 10px;
+        font-size: large;
+        border: 0;
+        border-radius: 50%;
+        background-color: #313442;
+
+     }
+     #slideshow-buttons>.buttons>button:hover{
+        background-color: #f69867;
+     }
+     #slideshow-buttons>.text{
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     }
+     #slideshow-buttons>.text>p{
+        margin-bottom: 0;
+        font-size: smaller;
+        color: #778dd6;
+     }
+     #slideshow-buttons>.text>h2{
+        margin-bottom: 0;
+        font-weight: 400;
+        font-size: xx-large;
+     }
+
+     /* slideshow */
+     #outer{
+      background-color: #1b1e30;
+     }
+     #slideshow{
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc((100%/4));
+      scroll-behavior: smooth;
+      /* overflow: hidden; */
+      gap: 20px;
+      width: 90%;
+      margin-left: auto;
+      /* justify-content: flex-end; */
+      overflow-x: auto;
+     }
+     #slideshow::-webkit-scrollbar{
+      width: 0;
+     }
+     #slideshow>div{
+      /* min-width: 35%; */
+      height: 350px;
+      background-size: cover;
+      background-position: center;
+
+     }
+     #slideshow>div:nth-child(1){
+      background-image: url("http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRBqqKqr21onAVq6raUtov7uxgcDeAth1j_qZL7IgfIGhFAzpo7A8MpZp-ESYU5wew2");
+     }
+     #slideshow>div:nth-child(2){
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f9/Marina_Bay_Sands_in_the_evening_-_20101120.jpg");
+     }
+     #slideshow>div:nth-child(3){
+      background-image: url("https://cdn.britannica.com/64/155864-050-34FBD7A2/view-Great-Barrier-Reef-Australia-coast.jpg");
+     }
+     #slideshow>div:nth-child(4){
+      background-image: url("https://smartwatermagazine.com/sites/default/files/styles/thumbnail-1180x647/public/victoria_falls_1.jpg?itok=EgKN1vl3");
+     }
+     #slideshow>div:nth-child(5){
+      background-image: url("https://cdn.britannica.com/86/170586-050-AB7FEFAE/Taj-Mahal-Agra-India.jpg?w=300");
+     }
+
+     #slideshow>.card{
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      text-align: center;
+      line-height: 0;
+     }
+     #slideshow>.card>div{
+      background-color: #31344280;
+     }
+
+     #slideshow>.see-all{
+      justify-content: center;
+      background-color: #f69867;
+     }
+     #slideshow>.see-all>h3{
+      font-size: 40px;
+     }
+     #slideshow>.see-all>h4{
+      font-size: 32px;
+      line-height: 0;
+      margin-top: 0px;
+     }
+     #slideshow>.see-all>a{
+      text-decoration: none;
+      color: #778dd6;
+      font-style: 20px;
+     }
+
+
+     /* Our Team */
+
+     #our-team{
+      margin-top: 50px;
+      background-color: #1a1d2d;
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      color: white;
+     }
+     #our-team>.image>img{
+      width: 100%;
+      opacity: 0.3;
+     }
+     #our-team>div>div{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      justify-content: center;
+      text-align: center;
+     }
+     #our-team span{
+      font-size: 16px;
+      color: #50525d;
+     }
+     #our-team>div>span{
+        font-weight: 400;
+        font-size: small;
+        color: #778dd6;
+     }
+    #our-team p{
+      font-size: 16px;
+    }
+    #our-team>div>div>div>h2{
+      margin-bottom: 5px;
+      font-size: 36px;
+    }
+    #our-team>div>h2{
+      font-size: 36px;
+    }
+
+
+    /* Testimonials */
+    #testimonials{
+      margin-top: 50px;
+      color: white;
+      width: 90%;
+      display: flex;
+      margin-left: auto;
+    }
+    #testimonials .buttons{
+      width: 100%;
+      margin-right: 20px;
+      padding: 30px 10px;
+    }
+    #testimonials>.reviews{
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc(100%/2.3);
+      gap: 15px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+    #testimonials>.reviews::-webkit-scrollbar{
+      width: 0;
+    }
+
+    #review>.card{
+      padding: 30px 25px;
+      background-color: #1b1e30;
+    }
+    #review>.card>div{
+      width: 50px;
+      height: 50px;
+      background-color: #313442;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: x-large;
+    }
+    #testimonials>.buttons>div{
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    #testimonials>.buttons>div>button{
+        color: white;
+        padding: 14px;
+        font-size: large;
+        border: 0;
+        border-radius: 50%;
+        background-color: #313442;
+
+     }
+     #testimonials>.buttons>div>button:hover{
+        background-color: #f69867;
+     }
+     #testimonials>.buttons>span{
+        font-weight: 400;
+        font-size: small;
+        color: #778dd6;
+     }
+
+     /* Subscription */
+     #subscription{
+      text-align: center;
+      width: 80%;
+      margin: auto;
+      margin-top: 70px;
+      color: white;
+     }
+     #subscription>div{
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(4,1fr);
+     }
+     #subscription>div{
+      padding: 20px 10%;
+     }
+     #subscription>div>div>i{
+      color: #3d414f;
+      font-size: 80px;
+     }
+     #subscription>span{
+      font-weight: 400;
+      font-size: small;
+      color: #778dd6;
+     }
+
+     #rule{
+      width: 80%;
+      margin: auto;
+      height: 2px;
+      background-color: #313442;
+      border: 0;
+     }
+
+     /* footer */
+
+     #footer{
+      width: 80%;
+      margin: 50px auto;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+     }
+     #footer .container{
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(3,1fr);
+      margin: 0 auto;
+     }
+     #footer .logo{
+      display: flex;
+      gap: 20px;
+     }
+     #footer .logo>i{
+      font-size: 40px;
+     }
+     #footer .cont{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     }
+     
+     
+
+
+     @media screen and (max-width: 800px){
+      .hide{
+        visibility: collapse;
+      }
+      #slideshow{
+        grid-auto-columns: calc((100%/3));
+      }
+
+
+      #testimonials>.reviews{
+      grid-auto-columns: calc(100%/1.7);
+    }
+    #testimonials>.buttons>div{
+      flex-direction: column;
+    }
+    #subscription>div{
+      grid-template-columns: repeat(3,1fr);
+     }
+
+     #footer{
+      flex-direction: column;
+     }
+     }
+
+     @media screen and (max-width:450px){
+      #slideshow{
+      grid-auto-columns: calc((100%/2));
+      }
+      #slideshow-buttons>.buttons{
+        width: 20%;
+     }
+     #slideshow-buttons>.buttons>button{
+        color: white;
+        padding: 8px;
+        font-size: medium;
+        border: 0;
+        border-radius: 50%;
+        background-color: #313442;
+
+     }
+     #our-team{
+      margin: auto;
+      grid-template-columns: repeat(1,1fr);
+     }
+     #testimonials{
+      margin: auto;
+      flex-direction: column;
+     }
+     #testimonials>.buttons>div{
+      flex-direction: row;
+    }
+    #subscription>div{
+      grid-template-columns: repeat(2,1fr);
+     }
+     }
+
+        
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="start logo"><img src="Project Files\Logo-removebg-preview.png" alt="logo"><div><h2 class="hide">Wanda</h2><h2 class="hide">WE</h2></div></div>
+        <div class="links"><a href="index.html">Home</a><a href="discover.html">Discover</a><a class="hide" href="form.html">Coustomise</a><a class="hide" href="">About Us</a></div>
+        <div class="ends">
+            <button class="hide"><a href="log_in.html">Sign in</a></button>
+            <button><a href="sign_up.html">Sign up</a></button>
+        </div>
+    </nav>
+
+    <!-- main -->
+    <div id="main">
+        <div><h1>Escape From Reality Let's Explore The World</h1><p>Get amazing experiance here no matter where in the world you want to go, we can help you go there anytime.</p><a href="form.html"><button >Get Quote & Offers <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a></div>
+    </div>
+
+    <!-- image -->
+    <div id="image"><img src="Project Files\header_image.jpg" alt=""></div>
+
+    <!-- main two -->
+    <div id="main-two">
+        <p>Get Amazing Experiance</p>
+        <h1>Find Travel Prfection</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa incidunt ex quas eligendi. Dolores labore in natus commodi.</p>
+    </div>
+    
+    <!-- services -->
+    <div id="services">
+        <div><div><i class="fa-solid fa-clipboard-check"></i></div><h4>Scedule a Plan</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ullam modi atque quia quisquam hic, nisi eaque fuga?</p></div>
+        <div><div><i class="fa-solid fa-globe"></i></div><h4>Find a Destination</h4><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus porro repudiandae aliquam sequi vero recusandae obcaecati quam iste?</p></div>
+        <div><div><i class="fa-solid fa-heart"></i></div><h4>Enjoy Your Trip</h4><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae consectetur veniam exercitationem fugiat ullam, sint aut optio numquam?</p></div>
+    </div>
+
+    <!-- slideshow buttons -->
+    <div id="slideshow-buttons">
+        <div class="text"><p>Popular Destination</p><h2>Recommended Destination</h2></div>
+        <div class="buttons"><button id="left"><i class="fa-solid fa-arrow-left"></i></button><button id="right"><i class="fa-solid fa-arrow-right"></i></button></div>
+    </div>
+
+    <!-- slideshow -->
+    <div id="outer">
+      <div id="slideshow">
+        <div class="card"><div><h5>Hong Kong Disneyland</h5><p>China</p></div></div>
+        <div class="card"><div><h5>Marina Bay Sands</h5><p>Singapore</p></div></div>
+        <div class="card"><div><h5>The Great Barrier Reef</h5><p>USA</p></div></div>
+        <div class="card"><div><h5>Victoria Falls</h5><p>Zimbabwe</p></div></div>
+        <div class="card"><div><h5>Taj Mahal</h5><p>India</p></div></div>
+        <div class="card see-all"><h3>EXPLORE</h3><h4>MORE</h4><a href="discover.html">See All</a></div>
+      </div>
+    </div>
+
+    <!-- our team -->
+    <div id="our-team">
+      <div class="image"><img src="Project Files\world_map_grey-removebg-preview.png" alt="World Map"></div>
+      <div>
+        <span>Benifits</span>
+        <h2>Our Team Already Available All Over The World</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iste, blanditiis fugit vel impedit tenetur molestias praesentium hic inventore eveniet.</p>
+        <div>
+          <div><h2>16K+</h2><span>Happy Customers</span></div>
+          <div><h2>20+</h2><span>Compnies</span></div>
+          <div><h2>20+</h2><span>Countries</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div id="testimonials">
+      <div class="buttons">
+        <span>Testimonials</span>
+        <h2>What People Say About Our Services</h2>
+        <div>
+          <button id="review-left"><i class="fa-solid fa-arrow-left"></i></button><button id="review-right"><i class="fa-solid fa-arrow-right"></i></button>
+          <span>There are many variations</span>
+        </div>
+      </div>
+      <div id="review" class="reviews">
+        <div class="card"><div><i class="fa-solid fa-quote-left"></i></div><h4>Mukesh Kumar</h4><span>⭐⭐⭐⭐⭐</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, deserunt.</p></div>
+        <div class="card"><div><i class="fa-solid fa-quote-left"></i></div><h4>Mukesh Kumar</h4><span>⭐⭐⭐⭐⭐</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, deserunt.</p></div>
+        <div class="card"><div><i class="fa-solid fa-quote-left"></i></div><h4>Mukesh Kumar</h4><span>⭐⭐⭐⭐⭐</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, deserunt.</p></div>
+        <div class="card"><div><i class="fa-solid fa-quote-left"></i></div><h4>Mukesh Kumar</h4><span>⭐⭐⭐⭐⭐</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, deserunt.</p></div>
+        <div class="card"><div><i class="fa-solid fa-quote-left"></i></div><h4>Mukesh Kumar</h4><span>⭐⭐⭐⭐⭐</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, deserunt.</p></div>
+      </div>
+    </div>
+
+    <!-- Subscription -->
+    <div id="subscription">
+      <span>Subscription</span>
+      <h1>Join Our Community to Get Best Price</h1>
+      <p>Subscribe to be the first to get our latest offers on teaval plans!</p>
+      <div>
+        <div><i class="fa-brands fa-cc-paypal"></i></div>
+        <div><i class="fa-brands fa-amazon-pay"></i></div>
+        <div><i class="fa-brands fa-digg"></i></div>
+        <div><i class="fa-brands fa-pied-piper-pp"></i></div>
+      </div>
+    </div>
+
+    <hr id="rule">
+
+    <!-- footer -->
+    <div id="footer">
+      <div>
+        <h3>Address</h3>
+        <p>V.P.O. Ganeshpur, Distt: Ambala, Haryana, 134202</p>
+        <h3>Contact Details</h3>
+        <p>+917009025478</p>
+        <p>er.harshdeepgill@gmail.com</p>
+        <p>Contact me for Site like this.</p>
+      </div>
+      <div class="cont">
+      <div class="container">
+        <div>
+          <h3>Contact Us</h3>
+          <h5>Location</h5>
+          <h5>Email</h5>
+          <h5>Telephone</h5>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <h5>Why WandaWE</h5>
+          <h5>Partner with us</h5>
+          <h5>Blog</h5>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <h5>Why WandaWE</h5>
+          <h5>Partner with us</h5>
+          <h5>Blog</h5>
+        </div>
+      </div>
+      <div class="logo">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+
+let slider = document.getElementById("slideshow");
+let firstCardWidth = slider.querySelector(".card").offsetWidth;
+
+let btn = document.querySelectorAll(".buttons>button");
+
+btn.forEach(btn =>{
+  btn.addEventListener("click", ()=>{
+    slider.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
+  })
+})
+
+
+
+let review = document.getElementById("review");
+let firstReviewWidth = review.querySelector(".card").offsetWidth;
+
+let but = document.querySelectorAll("#testimonials>.buttons>div>button");
+
+but.forEach(e =>{
+  e.addEventListener("click", function(){
+    review.scrollLeft += e.id === "review-left" ? -firstReviewWidth : firstReviewWidth;
+  })
+})
+
+
+
+
+
+
+</script>
+
+

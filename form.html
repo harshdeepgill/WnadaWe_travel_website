@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        #navbar{
+            padding: 10px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #778dd6;
+        }
+        #navbar>div{
+            display: flex;
+            align-items: center;
+        }
+        #navbar>.start{
+            width: 20%;
+            justify-content: start;
+            /* padding: 0 20%; */
+        }
+        .logo>img{
+            width: 20%;
+            /* border: 1px solid red; */
+        }
+        #navbar>.links{
+            width: 40%;
+            gap: 10%;
+            /* justify-content: space-between; */
+        }
+        #navbar>.start h2{
+            color: white;
+            /* font-family: roboto condensed 700; */
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 0;
+            /* margin-top: 10px; */
+        }
+        #navbar>.ends>button{
+            padding: 10px 20px;
+            font-family: inter 400;
+            font-size: 16px;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+        }
+        #navbar>.ends>button:nth-child(1){
+            background-color: #778dd6;
+            
+        }
+        #navbar>.ends>button:nth-child(2){
+            background-color: #1a1d2d;
+        }
+        #navbar>.ends>button:nth-child(2):hover{
+            background-color: #f69867;
+        }
+        #navbar>.links>a{
+            text-decoration: none;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+
+
+        /* This page */
+        body{
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        #bg-poster{
+            width: 100%;
+            min-height: 1000px;
+            top: 0;
+            left: 0;
+            background-image: url("https://www.tahiti.com/images1/banners/island_bora_bora_masthead2.jpg");
+            background-size: cover;
+            animation: slider 80s infinite linear;
+        }
+        @keyframes slider{
+            0%{ background-image: url("https://www.tahiti.com/images1/banners/island_bora_bora_masthead2.jpg");}
+            10%{ background-image: url("https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2016/02/Great-Buddah-of-Kamakura.jpg");}
+            20%{background-image: url("https://cdn.britannica.com/36/162636-050-932C5D49/Colosseum-Rome-Italy.jpg"); }
+            30%{ background-image: url("https://i.natgeofe.com/n/535f3cba-f8bb-4df2-b0c5-aaca16e9ff31/giza-plateau-pyramids.jpg");}
+            40%{background-image: url("https://cdn.britannica.com/63/153463-050-06B6270D/Grand-Canal-Venice.jpg"); }
+            50%{ background-image: url("https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2023/02/02192048/great-wall-of-china-1600x900.jpeg");}
+            60%{background-image: url("https://hips.hearstapps.com/hmg-prod/images/mata-atlantica-atlantic-forest-in-brazil-royalty-free-image-1668724621.jpg?resize=1200:*"); }
+            70%{ background-image: url("https://media.architecturaldigest.com/photos/6032b3c9a0b9bd2edd5510d1/1:1/w_2880,h_2880,c_limit/Hero_Soneva%20Jani%20Chapter%20Two%20by%20Aksham%20Abdul%20Ghadir.jpg");}
+            80%{background-image: url("https://images.theconversation.com/files/440264/original/file-20220111-23-19p1ssc.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"); }
+            90%{ background-image: url("https://cdn-imgix.headout.com/microbrands-banner-image/image/b698f96a3bf7e35418940973f33c4708-The%20Acropolis%20of%20Athens.jpeg");}
+        }
+        #bg-form{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 20px 50px;
+            width: 30%;
+            background-color: #778dd695;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #1a1d2d;
+        }
+        #register>h2, #register h3{
+            text-align: center;
+            color: #1a1d2d;
+        }
+        #register label{
+            font-style: italic;
+            font-style: 18px;
+            color: #1a1d2d;
+        }
+        #register input{
+            /* width: 100%; */
+            padding: 7px;
+            border-radius: 3px;
+            border: 0;
+        }
+        #register .full-width{
+            width: 100%;
+        }
+        #phone-number{
+            
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #phone{
+            width: 100%;
+        }
+        #country, #country-code{
+            padding: 7px;
+            border: 0;
+            border-radius: 3px;
+        }
+        #submit-button{
+            border: 0;
+            padding: 7px;
+            background-color: #1a1d2d;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="start logo"><img src="Project Files\Logo-removebg-preview.png" alt=""><div><h2>Wanda</h2><h2>We</h2></div></div>
+        <div class="links"><a href="index.html">Home</a><a href="discover.html">Discover</a><a href="form.html">Coustomise</a><a href="">About Us</a></div>
+        <div class="ends">
+            <button>Log in</button>
+            <button>Sign up</button>
+        </div>
+    </nav>
+<div id="bg-poster"></div>
+<div id="bg-form">
+    <form id="register" action="">
+    <h2>Get Offers</h2>
+        <label for="name">Name:</label>
+        <br>
+        <input class="full-width" id="name" type="text" placeholder="What's your name?">
+        <br><br>
+        <label for="age">Age:</label>
+        <br>
+        <input class="full-width" id="age" type="number" placeholder="What's your age?">
+        <br><br>
+        <label for="gender">Gender:</label>
+        <br>
+        &nbsp;&nbsp;<input type="radio" name="gender" id="gender" value="male">&nbsp;<span>Male</span>
+        &nbsp;&nbsp;<input type="radio" name="gender" id="gender" value="female">&nbsp;<span>Female</span>
+        &nbsp;&nbsp;<input type="radio" name="gender" id="gender" value="other">&nbsp;<span>Other</span>
+        <br><br>
+        <label for="email">Email:</label>
+        <br>
+        <input class="full-width" id="email" type="text" placeholder="What's your Email?">
+        <br><br>
+        <label for="phone">Ph. Number:</label>
+        <br>
+        <div id="phone-number">
+        <select id="country-code">
+            <option value="+91">+91</option>
+            <option value="+92">+92</option>
+            <option value="+93">+93</option>
+        </select>
+        <input id="phone" type="number" placeholder="9896******">
+        </div>
+        <br>
+        <label for="address">Address:</label>
+        <br>
+        <input class="full-width" type="text" name="address" id="address" placeholder="What's your address?">
+        <br>
+        <h3>Trip Details</h3>
+        <label for="country">Vacation Country:</label>
+        <br>
+        <select name="country" id="country">
+            <option value="india">India</option>
+            <option value="china">China</option>
+            <option value="brazil">Brazil</option>
+            <option value="italy">Italy</option>
+            <option value="USA">USA</option>
+            <option value="Africa">Africa</option>
+            <option value="thailand">Thiland</option>
+            <option value="indonasia">Indonasia</option>
+            <option value="australia">Australia</option>
+        </select>
+        <br><br>
+        <label for="people">Number of people:</label>
+        <br>
+        <input class="full-width" type="number" name="people" id="people">
+        <br><br>
+        <label for="budget">Budget:</label>
+        <br>
+        <input class="full-width" type="number" name="budget" id="budget">
+        <br><br>
+        <input id="submit-button" type="submit" value="Get Quote">
+
+    </form>
+</div>
+</body>
+</html>
+
+<script>
+
+if(localStorage.getItem("registerd-users")== null){
+        localStorage.setItem("registerd-users", JSON.stringify([]));
+        }
+
+    let frm = document.getElementById("register");
+    frm.addEventListener("submit", function(){
+        event.preventDefault();
+
+
+
+        let obj = {};
+
+        let obj1 = {};
+        let nam = document.getElementById("name");
+        let age = document.getElementById("age");
+        let gen = document.getElementById("gender");
+        let eml = document.getElementById("email");
+        let cod = document.getElementById("country-code");
+        let phn = document.getElementById("phone");
+        let add = document.getElementById("address");
+
+        obj1.name = nam.value;
+        obj1.age = age.value;
+        obj1.gender = gen.value;
+        obj1.email = eml.value;
+        obj1.phNumber = cod.value + phn.value;
+        obj1.address = add.value;
+
+        obj.personalDetails = obj1;
+
+
+        let obj2 = {};
+        let cot = document.getElementById("country");
+        let num = document.getElementById("people");
+        let bud = document.getElementById("budget");
+
+        obj2.country = cot.value;
+        obj2.numberOfPeople = num.value;
+        obj2.budget = bud.value;
+
+        obj.intrestedIn = obj2;
+
+        let form_data = JSON.parse(localStorage.getItem("registerd-users"));
+
+        form_data.push(obj);
+
+        localStorage.setItem("registerd-users", JSON.stringify(form_data));
+    })
+
+</script>
