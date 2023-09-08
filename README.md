@@ -37,5 +37,10 @@ Landing pafe of our website is where you can navigate through all the basic nfor
 
 **Discover Page**
 
-Here the user can see the vairous trip plans that our company is providing, this is made with the help of grid. Each card is 
+Here the user can see the vairous trip plans that our company is providing, this is made with the help of grid.
+
+
+
+**Netlify Link**
+https://hilarious-paletas-40d5fe.netlify.app/
 
